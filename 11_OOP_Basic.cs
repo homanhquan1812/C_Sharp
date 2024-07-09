@@ -14,25 +14,25 @@ namespace OOP_Basic
             // Constructor
             public Person(string name, int age)
             {
+                // Method 1
                 this.name = name;
                 this.age = age;
 
-                // Properties in the constructor 
+                // Method 2: Properties in the constructor
                 Name = name;
-                Age = age; 
+                Age = age;
             }
 
             public string getName()
             {
                 return name;
             }
-
             public void setName(string value)
             {
                 name = value;
             }
 
-            // Properties
+            // Properties (Don't write these properties if you choose Method 1)
             public string Name { get; set; }
             public int Age { get; set; }
 
@@ -72,7 +72,12 @@ namespace OOP_Basic
 
             Person Person2 = new Person("Sussy Boy", 25); // Object
 
-            Console.WriteLine($"My name is {Person2.Name} and I'm {Person2.age} years old.");
+            Console.WriteLine($"My name is {Person2.Name} and I'm {Person2.Age} years old.");
+
+            Person2.setName("Sussy Among Us Boy");
+            Person2.Age = 27;
+
+            Console.WriteLine($"My name is {Person2.getName()} and I'm {Person2.Age} years old.");
 
             Person2.Information();
         }
